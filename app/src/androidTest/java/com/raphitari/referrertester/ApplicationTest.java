@@ -1,4 +1,4 @@
-package com.adwave.referrertester;
+package com.raphitari.referrertester;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
