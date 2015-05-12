@@ -22,7 +22,7 @@ public class ReferrerBroadcastFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_referrer_broadcast, container, false);
 
         Button send_referrer = (Button) rootView.findViewById(R.id.send_referrer);
-        final EditText package_name = (EditText) rootView.findViewById(R.id.editPackageName);
+        final EditText package_name = (EditText) rootView.findViewById(R.id.editReferrerPackageName);
 
         send_referrer.setOnClickListener(new View.OnClickListener() {
             @Override
