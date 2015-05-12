@@ -30,14 +30,12 @@ public class PlayStoreFragment extends Fragment {
         play_store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Uri.Builder builder = new Uri.Builder();
-//                builder.scheme("market")
-//                    .authority("details")
-//                    .appendQueryParameter("id", "com.adwave.soundboard")
-//                    .appendQueryParameter("referrer", "utm_source=test_source_3&utm_medium=test_medium_3&utm_campaign=test_campaign_3");
-//                Uri uri = builder.build();
-                Uri uri = Uri.parse("market://details?id=" + package_name.getText() + "&referrer=utm_source%3D" + source.getText() + "%26utm_medium%3D" + medium.getText() + "%26utm_campaign%3D" + campaign.getText());
-                Log.d("Jim", uri.toString());
+                Uri.Builder builder = new Uri.Builder();
+                builder.scheme("market")
+                    .authority("details")
+                    .appendQueryParameter("id", package_name.getText().toString())
+                    .appendQueryParameter("referrer", "utm_source%3D" + source.getText() + "%26utm_medium%3D" + medium.getText() + "%26utm_campaign%3D" + campaign.getText());
+                Uri uri = builder.build();
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(uri);
                 startActivity(intent);
